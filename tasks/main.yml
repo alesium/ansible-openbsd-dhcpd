@@ -1,0 +1,10 @@
+- name: copy dhcpd.conf
+  tags: openbsd-dhcpd
+  template:
+    src: "{{ openbsd_dhcpd_conf_src }}"
+    dest: "{{ openbsd_dhcpd_conf_dest }}"
+    mode: "0644"
+    owner: "root"
+    group: "wheel"
+    backup: "yes"
+  notify: enable dhcpd

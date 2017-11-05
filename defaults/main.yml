@@ -1,0 +1,4 @@
+openbsd_dhcpd_conf_src: "dhcpd.conf.j2"
+openbsd_dhcpd_conf_dest: "/etc/dhcpd.conf"
+openbsd_dhcpd_listen_interface: "{{ ansible_default_ipv4.address }}"
+openbsd_dhcpd_service_name: "dhcpd"
