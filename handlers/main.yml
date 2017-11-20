@@ -3,3 +3,9 @@
     name: "{{ openbsd_dhcpd_service_name }}"
     enabled: "yes"
     state: "started"
+
+- name: restart dhcpd
+  service:
+    name: "{{ openbsd_dhcpd_service_name }}"
+    state: "restarted"
+    enabled: "yes"
