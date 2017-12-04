@@ -1,3 +1,8 @@
+- name: ensure dhcpd is enabled
+	debug: 
+		msg: "enabling dhcpd"
+	notify: enable dhcpd
+
 - name: copy dhcpd.conf
   tags: openbsd-dhcpd
   template:
@@ -7,4 +12,4 @@
     owner: "root"
     group: "wheel"
     backup: "yes"
-  notify: enable dhcpd
+  notify: restart dhcpd
