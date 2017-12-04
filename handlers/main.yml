@@ -8,4 +8,3 @@
   service:
     name: "{{ openbsd_dhcpd_service_name }}"
     state: "restarted"
-    enabled: "yes"
