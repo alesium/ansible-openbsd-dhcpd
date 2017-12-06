@@ -1,7 +1,7 @@
 - name: ensure dhcpd is enabled
-	debug: 
-		msg: "enabling dhcpd"
-	notify: enable dhcpd
+  debug:
+    msg: "enabling dhcpd"
+  notify: enable dhcpd
 
 - name: copy dhcpd.conf
   tags: openbsd-dhcpd
